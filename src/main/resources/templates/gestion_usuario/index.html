@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <title>Inicio</title>
+</head>
+
+<div id="blueNotification" th:if="${param.exitoRegistro}" class="notification blue">
+    <span>Se ha enviado un enlace de activación al correo electronico</span>
+    <span class="close" onclick="closeNotification('blueNotification')">×</span>
+</div>
+
+<div id="blueNotification" th:if="${param.exitoRestablecer}" class="notification blue">
+    <span>Se ha enviado un enlace para cambiar su contraseña al correo electronico</span>
+    <span class="close" onclick="closeNotification('blueNotification')">×</span>
+</div>
+
+<div id="greenNotification" th:if="${param.exitoCambio}" class="notification green">
+    <span>Su contraseña se ha actualizado exitosamente</span>
+    <span class="close" onclick="closeNotification('greenNotification')">×</span>
+</div>
+
+<div id="greenNotification" th:if="${param.exitoActivacion}" class="notification green">
+    <span>Su cuenta se ha activado exitosamente</span>
+    <span class="close" onclick="closeNotification('greenNotification')">×</span>
+</div>
+
+<div id="greenNotification" th:if="${param.exitoLogin}" class="notification green">
+    <span>Ha iniciado sesión exitosamente</span>
+    <span class="close" onclick="closeNotification('greenNotification')">×</span>
+</div>
+
+<div id="greenNotification" th:if="${param.logout}" class="notification green">
+    <span>Ha cerrado sesión exitosamente</span>
+    <span class="close" onclick="closeNotification('greenNotification')">×</span>
+</div>
+
+<div id="redNotification" th:if="${param.errorToken}" class="notification red">
+    <span>Error: Token invalido</span>
+    <span class="close" onclick="closeNotification('redNotification')">×</span>
+</div>
+
+<body>
+<div class="header" th:insert="~{fragments/navbar.html}"></div>
+
+<div class="texto-presentacion">
+    <div class="texto">
+
+        <div class="titulo">
+            Organización Religiosa Virgen Peregrina
+        </div>
+
+        <div class="enunciado">
+            Centrada en la Promocion y Difucion de fe
+        </div>
+        <div class="fondo-negro"></div>
+    </div>
+
+    <div class="fondo"></div>
+</div>
+
+<div class="historia">
+
+    <div class="titulo">Historia</div>
+    <div class="texto">La Parroquia fue creada mediante Decreto 69 del Excelentísimo Señor Arzobispo de Bogotá, Luis Concha Córdoba,
+        Prima de Colombia el día 7 de Octubre de 1960, en la solemnidad de Nuestra Señora del Rosario siendo segregada
+        en la Parroquia Inmaculado Corazón de María y de la Sagrada Familia.
+
+        En el año anterior el 11 de febrero de 1959 había sido eregida como Vicaria de Nuestra Señora del Rosario por el 
+        Cardenal Crisanto Luque Arzobispo de Bogotá segregada a su vez a la Vicaria de la Sagrada Familia perteneciente
+        a la Parroquia del Inmaculado Corazón de Maria,
+        
+    </div>
+
+    <div class="imagen"></div>
+
+</div>
+
+<div class="mision">
+
+    <div class="titulo">Misión</div>
+    <div class="texto">Promover la espiritualidad y la unidad a través de la organización de peregrinaciones sagradas y la gestión
+        de donaciones de réplicas religiosas, facilitando a los fieles la conexión profunda con su fe y la
+        oportunidad de contribuir a la preservación y difusión de su patrimonio espiritual.
+    </div>
+
+    <div class="fondo-azul"></div>
+
+</div>
+
+<div class="vision">
+
+    <div class="titulo">Visión</div>
+    <div class="texto">Ser un referente global en la promoción de la fe y la espiritualidad, ofreciendo experiencias de peregrinación 
+        transformadoras y accesibles, mientras gestionamos con integridad las donaciones de réplicas para apoyar
+        la educación religiosa y el enriquecimiento cultural. Aspiramos a construir una comunidad de creyentes unidos
+        por la devoción y el compromiso hacia el fortalecimiento y la preservación de nuestras tradiciones sagradas
+        
+    </div>
+
+    <div class="imagen"></div>
+
+</div>
+
+<div class="footer">
+    <div class="superior">
+        <div class="logo"></div>
+        <div class="fondo-azul"></div>
+    </div>
+    <div class="inferior"></div>
+</div>
+
+</body>
+<script th:src="@{/js/script.js}"></script>
+
+</html>
